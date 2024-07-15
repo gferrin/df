@@ -1,62 +1,214 @@
----
-import Layout from '../layouts/BlogPost.astro';
----
-
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
-
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
-
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
-
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
-
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel" />
+        <link  href="https//cdn.rawgit.com/noelboss/featherlight/1.7.1/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+        <meta property="og:url" content="https://douglasferrin.com/" />
+        <meta property="og:image" content="https://assets.douglasferrin.com/works/self-portrait-jail-full.jpg" />
+        <title>Douglas Ferrin | douglasferrin.com</title>
+        <link rel="stylesheet" href="https://assets.douglasferrin.com/scripts/font-awesome-4.6.3/css/font-awesome.css" />
+        <link rel="stylesheet" href="https://assets.douglasferrin.com/scripts/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://assets.douglasferrin.com/scripts/bootstrap/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://douglasferrin.com/styles.css" />
+     
+    </head>
+    <body>
+        <div class="header">
+            <a href="/"><h1>Douglas Ferrin</h1></a>
+            <div class="menu">
+                <div class="nav-col"><a class="active" href="/">Self Portraits</a><a href="/works/figurative">Figure Paintings</a><a href="/works/still-life">Still Lifes</a></div>
+                <div class="nav-col"><a href="/works/landscape">Landscapes</a><a href="/works/drawings">Drawings</a><a href="/works/murals">Murals</a></div>
+                <a class="hamburger">
+                    <div class="ham-1"></div>
+                    <div class="ham-2"></div>
+                    <div class="ham-3"></div>
+                </a>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="mobile-menu">
+            <div class="nav-col"><a class="active" href="/">Self Portraits</a><a href="/works/figurative">Figure Paintings</a><a href="/works/still-life">Still Lifes</a></div>
+            <div class="nav-col"><a href="/works/landscape">Landscapes</a><a href="/works/drawings">Drawings</a><a href="/works/murals">Murals</a></div>
+        </div>
+        <div class="home">
+            <div class="feed">
+                <div class="works-feed">
+                    <div class="work-wrapper">
+                        <div class="work-image">
+                            <a href="/work/jail-doug-2016">
+                                <img
+                                    class="lazyload"
+                                    data-sizes="auto"
+                                    data-src="https://assets.douglasferrin.com/works/self-portrait-jail-large.jpg"
+                                    data-srcset="https://assets.douglasferrin.com/works/self-portrait-jail-thumb.jpg 180w, https://assets.douglasferrin.com/works/self-portrait-jail-large.jpg 640w"
+                                />
+                            </a>
+                        </div>
+                        <div class="work-info">
+                            <h3 class="title">Jail Doug,&nbsp;<span>2016</span></h3>
+                            <p class="material">Acrylic on Board</p>
+                            <p class="size">14 x 17 in</p>
+                            <a href="/cdn-cgi/l/email-protection#a3cbc6cfcfcce3c7ccd6c4cfc2d0c5c6d1d1cacd8dc0ccce9cd0d6c1c9c6c0d79ef3d6d1c0cbc2d0c683eacdd2d6cad1da9983e9c2cacf83e7ccd6c48f8391939295">
+                                <div class="for-sale-btn">Inquire to Purchase</div>
+                            </a>
+                            <div class="share">
+                                <div
+                                    class="grid-item-overlay-share js-social-sharing"
+                                    data-share-title="Jail Doug"
+                                    data-share-image="https://assets.douglasferrin.com/works/undefined"
+                                    data-share-link="https://douglasferrin.com/work/jail-doug-2016"
+                                ></div>
+                                <button class="btn facebook js-share" type="button" data-share-network="facebook"><i class="fa fa-facebook"></i></button>
+                                <button class="btn twitter js-share" type="button" data-share-network="twitter"><i class="fa fa-twitter"></i></button>
+                                <button class="btn pinterest js-share" type="button" data-share-network="pinterest"><i class="fa fa-pinterest"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-wrapper">
+                        <div class="work-image">
+                            <a href="/work/self-portrait-1991">
+                                <img
+                                    class="lazyload"
+                                    data-sizes="auto"
+                                    data-src="https://assets.douglasferrin.com/works/self-portrait-with-suspenders-large.jpg"
+                                    data-srcset="https://assets.douglasferrin.com/works/self-portrait-with-suspenders-thumb.jpg 180w, https://assets.douglasferrin.com/works/self-portrait-with-suspenders-large.jpg 640w"
+                                />
+                            </a>
+                        </div>
+                        <div class="work-info">
+                            <h3 class="title">Self Portrait,&nbsp;<span>1991</span></h3>
+                            <p class="material">Oil on Masonite</p>
+                            <p class="size">48 x 72 in</p>
+                            <div class="share">
+                                <div
+                                    class="grid-item-overlay-share js-social-sharing"
+                                    data-share-title="Self Portrait"
+                                    data-share-image="https://assets.douglasferrin.com/works/undefined"
+                                    data-share-link="https://douglasferrin.com/work/self-portrait-1991"
+                                ></div>
+                                <button class="btn facebook js-share" type="button" data-share-network="facebook"><i class="fa fa-facebook"></i></button>
+                                <button class="btn twitter js-share" type="button" data-share-network="twitter"><i class="fa fa-twitter"></i></button>
+                                <button class="btn pinterest js-share" type="button" data-share-network="pinterest"><i class="fa fa-pinterest"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-wrapper">
+                        <div class="work-image">
+                            <a href="/work/sitting-at-easel-2013">
+                                <img
+                                    class="lazyload"
+                                    data-sizes="auto"
+                                    data-src="https://assets.douglasferrin.com/works/self-portrait-2012-large.jpg"
+                                    data-srcset="https://assets.douglasferrin.com/works/self-portrait-2012-thumb.jpg 180w, https://assets.douglasferrin.com/works/self-portrait-2012-large.jpg 640w"
+                                />
+                            </a>
+                        </div>
+                        <div class="work-info">
+                            <h3 class="title">Self Portrait,&nbsp;<span>2013</span></h3>
+                            <p class="material">Oil on Linen</p>
+                            <p class="size">22 x 28 in</p>
+                            <div class="share">
+                                <div
+                                    class="grid-item-overlay-share js-social-sharing"
+                                    data-share-title="Self Portrait"
+                                    data-share-image="https://assets.douglasferrin.com/works/undefined"
+                                    data-share-link="https://douglasferrin.com/work/sitting-at-easel-2013"
+                                ></div>
+                                <button class="btn facebook js-share" type="button" data-share-network="facebook"><i class="fa fa-facebook"></i></button>
+                                <button class="btn twitter js-share" type="button" data-share-network="twitter"><i class="fa fa-twitter"></i></button>
+                                <button class="btn pinterest js-share" type="button" data-share-network="pinterest"><i class="fa fa-pinterest"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-wrapper">
+                        <div class="work-image">
+                            <a href="/work/self-portrait-2005">
+                                <img
+                                    class="lazyload"
+                                    data-sizes="auto"
+                                    data-src="https://assets.douglasferrin.com/works/shirtless-self-portrait-large.jpg"
+                                    data-srcset="https://assets.douglasferrin.com/works/shirtless-self-portrait-thumb.jpg 180w, https://assets.douglasferrin.com/works/shirtless-self-portrait-large.jpg 640w"
+                                />
+                            </a>
+                        </div>
+                        <div class="work-info">
+                            <h3 class="title">Self Portrait,&nbsp;<span>2005</span></h3>
+                            <p class="material">Oil on Linen</p>
+                            <p class="size">40 x 54 in</p>
+                            <div class="share">
+                                <div
+                                    class="grid-item-overlay-share js-social-sharing"
+                                    data-share-title="Self Portrait"
+                                    data-share-image="https://assets.douglasferrin.com/works/undefined"
+                                    data-share-link="https://douglasferrin.com/work/self-portrait-2005"
+                                ></div>
+                                <button class="btn facebook js-share" type="button" data-share-network="facebook"><i class="fa fa-facebook"></i></button>
+                                <button class="btn twitter js-share" type="button" data-share-network="twitter"><i class="fa fa-twitter"></i></button>
+                                <button class="btn pinterest js-share" type="button" data-share-network="pinterest"><i class="fa fa-pinterest"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-wrapper">
+                        <div class="work-image">
+                            <a href="/work/self-portrait-1999">
+                                <img
+                                    class="lazyload"
+                                    data-sizes="auto"
+                                    data-src="https://assets.douglasferrin.com/works/self-portrait-in-white-shirt-large.jpg"
+                                    data-srcset="https://assets.douglasferrin.com/works/self-portrait-in-white-shirt-thumb.jpg 180w, https://assets.douglasferrin.com/works/self-portrait-in-white-shirt-large.jpg 640w"
+                                />
+                            </a>
+                        </div>
+                        <div class="work-info">
+                            <h3 class="title">Self Portrait,&nbsp;<span>1999</span></h3>
+                            <p class="material">Oil on Linen</p>
+                            <p class="size">28 x 22 in</p>
+                            <div class="share">
+                                <div
+                                    class="grid-item-overlay-share js-social-sharing"
+                                    data-share-title="Self Portrait"
+                                    data-share-image="https://assets.douglasferrin.com/works/undefined"
+                                    data-share-link="https://douglasferrin.com/work/self-portrait-1999"
+                                ></div>
+                                <button class="btn facebook js-share" type="button" data-share-network="facebook"><i class="fa fa-facebook"></i></button>
+                                <button class="btn twitter js-share" type="button" data-share-network="twitter"><i class="fa fa-twitter"></i></button>
+                                <button class="btn pinterest js-share" type="button" data-share-network="pinterest"><i class="fa fa-pinterest"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="footer">
+            <div class="signups">
+                <p>Subscribe for new works and musings from Douglas</p>
+                <div id="mc_embed_signup">
+                    <form
+                        class="validate"
+                        id="mc-embedded-subscribe-form"
+                        action="//douglasferrin.us14.list-manage.com/subscribe/post?u=1ff21592ea739ccefa462aa24&amp;id=78a2fb7f9a"
+                        method="post"
+                        name="mc-embedded-subscribe-form"
+                        target="_blank"
+                        novalidate
+                    >
+                        <div id="mc_embed_signup_scroll">
+                            <input class="email" id="mce-EMAIL" type="email" value name="EMAIL" placeholder="email address" required /><input class="button" id="mc-embedded-subscribe" type="submit" value="Subscribe" name="subscribe" />
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1ff21592ea739ccefa462aa24_78a2fb7f9a" tabindex="-1" value /></div>
+                            <div class="clear"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="links"><a href="/">Work</a><a href="/about">About</a><a href="/press">Press</a><a href="/cdn-cgi/l/email-protection#234b464f4f4c63474c56444f4250454651514a4d0d404c4e">Contact</a></div>
+        </div>
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    </body>
+    <script type="text/javascript" src="/bundle.js" charset="utf-8"></script>
+    <script src="https://assets.douglasferrin.com/scripts/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://assets.douglasferrin.com/scripts/lazysizes/lazysizes.min.js"></script>
+    <script src="https://assets.douglasferrin.com/scripts/dropzone/dropzone.js"></script>
+</html>
