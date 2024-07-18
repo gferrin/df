@@ -3,3 +3,12 @@
 
 export const SITE_TITLE = 'Astro Blog';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
+
+export const menuItems = [
+    { id: 'home', name: 'Self Portraits' },
+    { id: 'about', name: 'Figure Paintings' },
+    { id: 'contact', name: 'Still Lifes' },
+    { id: 'landscapes', name: 'Landscapes' },
+    { id: 'drawings', name: 'Drawings' },
+    { id: 'murals', name: 'Murals' },
+];
