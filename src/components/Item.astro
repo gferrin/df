@@ -17,7 +17,7 @@ const forSale = frontmatter.forSale || false;
 // Use the first available identifier for the key
 const key = post?.url || item.id || frontmatter.title;
 ---
-<div key={key} class="flex flex-col md:flex-row items-start mb-8 md:justify-center">
+<div key={key} class="flex flex-col md:flex-row items-start mb-8 md:justify-center font-samibold">
     <img src={s3Url} alt={title} class="w-full md:w-1/2 mb-4" />
     <div class="text-center md:text-left md:pl-4">
         <h2 class="text-lg font-semibold italic">{title}</h2>
@@ -26,7 +26,7 @@ const key = post?.url || item.id || frontmatter.title;
         <p class="mb-1">Year: {year}</p>
         {
             forSale && (
-                <a href={`mailto:${email}?subject=${title}`} class="font-samibold text-black underline hover:text-blue-500">
+                <a href={`mailto:${email}?subject=${title}`} class="font-bold text-black underline hover:text-blue-500">
                     Inquire to Purchase
                 </a>
             )
