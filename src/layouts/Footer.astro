@@ -1,0 +1,13 @@
+---
+import { email, SITE_TITLE } from '../consts';
+---
+<div class=" text-black text-center p-4">
+    <p>&copy; 2021 {SITE_TITLE}</p>
+
+    <div class="flex justify-end">
+        <a href="/work" class="mr-4">Work</a>
+        <a href="/about" class="mr-4">About</a>
+        <a href="/press" class="mr-4">Press</a>
+        <a href={`mailto:${email}`} class="mr-4">Contact</a>
+    </div>
+</div>
