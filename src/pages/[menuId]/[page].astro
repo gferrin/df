@@ -1,0 +1,26 @@
+---
+import { filterPostsByMenuId } from '../../utils/post';
+import { MAX_POST_PER_PAGE } from '../../consts';
+import SharedItem from '../../layouts/SharedItem.astro';
+
+export async function getStaticPaths({ paginate }) {
+    const allPosts = await Astro.glob('../../../**/**/*.md*');
+    const menuIds = [...new Set(allPosts.map((p) => p.frontmatter.menuId))].filter(Boolean);
+
+    return menuIds.flatMap((menuId) => {
+        const menuIdPosts = filterPostsByMenuId(allPosts, menuId);
+        return paginate(menuIdPosts, {
+            params: { menuId },
+            pageSize: MAX_POST_PER_PAGE,
+        });
+    });
+}
+
+const { page } = Astro.props;
+const { menuId } = Astro.params;
+const pathname = new URL(Astro.request.url).pathname.split('/');
+const firstPath = pathname[2];
+
+---
+
+<SharedItem pageData={page} firstPath={firstPath} menuId={menuId} />
