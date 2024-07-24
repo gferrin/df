@@ -3,7 +3,7 @@
 
 export const SITE_TITLE = 'Astro Blog';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
-
+export const MAX_POST_PER_PAGE = 5;
 export const menuItems = [
     { id: 'self-protraits', name: 'Self Portraits' },
     { id: 'figure-paintings', name: 'Figure Paintings' },
