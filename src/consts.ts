@@ -3,6 +3,7 @@
 
 export const SITE_TITLE = 'Astro Blog';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
+export const email = 'hello@douglasferrin.com';
 export const MAX_POST_PER_PAGE = 5;
 export const menuItems = [
     { id: 'self-protraits', name: 'Self Portraits' },

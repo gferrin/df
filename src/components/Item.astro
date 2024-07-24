@@ -1,6 +1,6 @@
 ---
+import { email } from '../consts';
 const { item } = Astro.props;
-console.log("Item", item);
 
 // Handle both single item and array of items
 const post = Array.isArray(item.data) ? item.data[0] : item.data;
@@ -26,7 +26,7 @@ const key = post?.url || item.id || frontmatter.title;
         <p class="mb-1">Year: {year}</p>
         {
             forSale && (
-                <a href="#" class="text-blue-500 hover:underline">
+                <a href={`mailto:${email}?subject=${title}`} class="font-samibold text-black underline hover:text-blue-500">
                     Inquire to Purchase
                 </a>
             )
