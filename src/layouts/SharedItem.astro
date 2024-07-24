@@ -1,0 +1,14 @@
+---
+import Layout from './Layout.astro';
+import Pagination from '../components/Pagination.astro';
+import Item from '../components/Item.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+let { pageData, firstPath } = Astro.props;
+
+---
+
+<Layout title={`${SITE_TITLE}`}>
+    <Item item={pageData} />
+    <Pagination page={pageData} firstPath={firstPath} />
+</Layout>
