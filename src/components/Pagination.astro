@@ -1,0 +1,69 @@
+---
+const { page, firstPath } = Astro.props;
+// @ts-ignore
+const paginationList = Array.from({ length: `${page.lastPage}` }, (_, i) => i + 1);
+const lastUrl = `${firstPath}/${page.lastPage}`;
+---
+
+<nav aria-label="Blog pages" class="mt-2 mb-6 flex items-center justify-center space-x-2">
+	{
+		!page.url.prev ? (
+			<span class="text-gray-500 cursor-not-allowed">
+				First
+			</span>
+		) : (
+			<a href="../blog" class="text-blue-600 hover:text-blue-700">
+				First
+			</a>
+		)
+	}
+
+	{
+		page.url.prev ? (
+			<a href={page.url.prev} class="text-blue-600 hover:text-blue-700">
+				<i class="fa fa-arrow-left" />
+			</a>
+		) : (
+			<span class="text-gray-500 cursor-not-allowed">
+				<i class="fa fa-arrow-left" />
+			</span>
+		)
+	}
+
+	{
+		paginationList.map((num) => (
+			<a
+				href={`../${firstPath}/${num}`}
+				class={`px-2 py-1 ${
+					page.currentPage == num ? 'text-white bg-blue-600' : 'text-blue-600 hover:bg-blue-100'
+				} rounded`}
+			>
+				{num}
+			</a>
+		))
+	}
+
+	{
+		!page.url.next ? (
+			<span class="text-gray-500 cursor-not-allowed">
+				<i class="fa fa-arrow-right" />
+			</span>
+		) : (
+			<a href={page.url.next} class="text-blue-600 hover:text-blue-700">
+				<i class="fa fa-arrow-right" />
+			</a>
+		)
+	}
+
+	{
+		!page.url.next ? (
+			<span class="text-gray-500 cursor-not-allowed">
+				Last
+			</span>
+		) : (
+			<a href={`../${lastUrl}`} class="text-blue-600 hover:text-blue-700">
+				Last
+			</a>
+		)
+	}
+</nav>
