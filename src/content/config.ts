@@ -3,6 +3,7 @@ import { defineCollection, z } from 'astro:content';
 const data = defineCollection({
 	type: 'content',
 	schema: z.object({
+		menuId: z.string(),
 		title: z.string(),
 		year: z.number(),
 		dimensions: z.string(),
