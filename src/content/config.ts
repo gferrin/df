@@ -8,7 +8,7 @@ const data = defineCollection({
 		year: z.number(),
 		dimensions: z.string(),
 		s3Url: z.string(),
-		catagory: z.string(),
+		category: z.string(),
 		forSale: z.boolean().default(false),
 		draft: z.boolean().default(false),
 	}),
