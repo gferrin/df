@@ -143,6 +143,13 @@ declare module 'astro:content' {
   collection: "data";
   data: InferEntrySchema<"data">
 } & { render(): Render[".md"] };
+"self-portrait-with-suspenders-large.md": {
+	id: "self-portrait-with-suspenders-large.md";
+  slug: "self-portrait-with-suspenders-large";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
 };
 
 	};
