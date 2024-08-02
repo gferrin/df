@@ -1,36 +1,59 @@
 ---
-import { menuItems } from '../consts';
+import { menuItems } from "../consts";
 ---
 
 <nav class="p-4 mb-8">
   <div class="container mx-auto flex justify-between items-center">
-    <div class="text-black text-lg font-bold">Douglas Ferrin</div>
+    <div class="text-black text-lg font-cinzel">DOUGLAS FERRIN</div>
     <div class="block lg:hidden">
       <button id="menu-button" class="text-black focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
             d="M4 6h16M4 12h16m-7 6h7"></path>
         </svg>
       </button>
     </div>
     <ul id="menu" class="hidden lg:flex space-x-8 text-black">
-      {menuItems.map(item => (
-        <li><a href={`/${item.id}/1`} class="hover:underline">{item.name}</a></li>
-      ))}
+      {
+        menuItems.map((item) => (
+          <li>
+            <a href={`/${item.id}/1`} class="hover:underline">
+              {item.name}
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </div>
-  <div id="mobile-menu" class="hidden lg:hidden mt-4 border-t border-gray-300 pt-4">
+  <div
+    id="mobile-menu"
+    class="hidden lg:hidden mt-4 border-t border-gray-300 pt-4"
+  >
     <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-black">
-      {menuItems.map(item => (
-        <li><a href={`#${item.id}`} class="hover:underline">{item.name}</a></li>
-      ))}
+      {
+        menuItems.map((item) => (
+          <li>
+            <a href={`#${item.id}`} class="hover:underline">
+              {item.name}
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </div>
 </nav>
 
 <script lang="js">
-  document.getElementById('menu-button').addEventListener('click', () => {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
+  document.getElementById("menu-button").addEventListener("click", () => {
+    document.getElementById("mobile-menu").classList.toggle("hidden");
   });
 </script>
