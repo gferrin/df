@@ -1,5 +1,5 @@
 ---
-import { email } from '../consts';
+import { email } from "../consts";
 const { item } = Astro.props;
 
 // Handle both single item and array of items
@@ -7,26 +7,33 @@ const post = Array.isArray(item.data) ? item.data[0] : item.data;
 const frontmatter = post?.frontmatter || item.data;
 
 // Fallback values for each property
-const title = frontmatter.title || 'Untitled';
-const s3Url = frontmatter.s3Url || '#';
-const category = frontmatter.category || 'Unknown';
-const dimensions = frontmatter.dimensions || 'Not specified';
-const year = frontmatter.year || 'Unknown';
+const title = frontmatter.title || "Untitled";
+const s3Url = frontmatter.s3Url || "#";
+const category = frontmatter.category || "Unknown";
+const dimensions = frontmatter.dimensions || "Not specified";
+const year = frontmatter.year || "Unknown";
 const forSale = frontmatter.forSale || false;
 
 // Use the first available identifier for the key
 const key = post?.url || item.id || frontmatter.title;
 ---
-<div key={key} class="flex flex-col md:flex-row items-start mb-8 md:justify-center font-samibold">
+
+<div
+    key={key}
+    class="flex flex-col md:flex-row items-start mb-8 md:justify-center"
+>
     <img src={s3Url} alt={title} class="w-full md:w-1/2 mb-4" />
     <div class="text-center md:text-left md:pl-4">
-        <h2 class="text-lg font-semibold italic">{title}</h2>
-        <p class="mb-1">Medium: {category}</p>
-        <p class="mb-1">Dimensions: {dimensions}</p>
-        <p class="mb-1">Year: {year}</p>
+        <h2 class="text-lg font-semibold picture-text-1">{title}</h2>
+        <p class="mb-1 picture-text-2">Medium: {category}</p>
+        <p class="mb-1 picture-text-2">Dimensions: {dimensions}</p>
+        <p class="mb-1 picture-text-2">Year: {year}</p>
         {
             forSale && (
-                <a href={`mailto:${email}?subject=${title}`} class="font-bold text-black underline hover:text-blue-500">
+                <a
+                    href={`mailto:${email}?subject=${title}`}
+                    class="font-bold text-black underline hover:text-blue-500"
+                >
                     Inquire to Purchase
                 </a>
             )
