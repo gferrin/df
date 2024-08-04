@@ -5,10 +5,17 @@
     font-style: normal;
 }
 
-/* @font-face {
+@font-face {
     font-family: 'Arial';
     src: url('/fonts/arial.ttf') format('truetype');
     font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArialBold';
+    src: url('/fonts/arial_bold.ttf') format('truetype');
+    font-weight: bold;
     font-style: normal;
 }
 
@@ -17,4 +24,4 @@
     src: url('/fonts/georgia.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-} */
+}

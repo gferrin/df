@@ -1,5 +1,5 @@
 ---
-import '../styles/index.css';
+import "../styles/index.css";
 
 interface Props {
 	title: string;
@@ -7,11 +7,11 @@ interface Props {
 
 const { title } = Astro.props;
 
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
-import Menu from './Menu.astro';
-import Main from './Main.astro';
-import Footer from './Footer.astro';
+import Menu from "./Menu.astro";
+import Main from "./Main.astro";
+import Footer from "./Footer.astro";
 ---
 
 <!doctype html>
@@ -24,8 +24,14 @@ import Footer from './Footer.astro';
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Cinzel"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
 		<title>{title}</title>
 	</head>
 	<body id="app-theme" class="app-theme">
@@ -41,12 +47,12 @@ import Footer from './Footer.astro';
 
 			<!-- Back to top Button -->
 			<button
-			class="backtotop hidden bg-gray-200 dark:bg-gray-900 mb-2"
-			id="backtotop"
-			title="Go to top"
-		  >
-			<i class="text-black dark:text-white fa fa-arrow-up"></i>
-		  </button>
+				class="backtotop hidden bg-gray-200 dark:bg-gray-900 mb-2"
+				id="backtotop"
+				title="Go to top"
+			>
+				<i class="text-black dark:text-white fa fa-arrow-up"></i>
+			</button>
 		</div>
 	</body>
 </html>
