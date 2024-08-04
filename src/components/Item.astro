@@ -24,15 +24,20 @@ const key = post?.url || item.id || frontmatter.title;
 >
     <img src={s3Url} alt={title} class="w-full md:w-1/2 mb-4" />
     <div class="text-center md:text-left md:pl-4">
-        <h2 class="text-lg font-semibold picture-text-1">{title}</h2>
-        <p class="mb-1 picture-text-2">Medium: {category}</p>
-        <p class="mb-1 picture-text-2">Dimensions: {dimensions}</p>
-        <p class="mb-1 picture-text-2">Year: {year}</p>
+        <h2 class="picture-text-1">
+            {title}
+            <span class="picture-text-1_year">
+                <!-- NOTE : Find a way to separate the year, then add comma and year in this span -->
+            </span>
+        </h2>
+        <div class="picture-text-2">Medium: {category}</div>
+        <div class="picture-text-2">Dimensions: {dimensions}</div>
+        <div class="picture-text-2">Year: {year}</div>
         {
             forSale && (
                 <a
                     href={`mailto:${email}?subject=${title}`}
-                    class="font-bold text-black underline hover:text-blue-500"
+                    class="text-black underline hover:text-blue-500 mt-4 arial-font"
                 >
                     Inquire to Purchase
                 </a>

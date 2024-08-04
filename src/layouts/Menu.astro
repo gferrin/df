@@ -2,15 +2,15 @@
 import { menuItems } from "../consts";
 ---
 
-<nav class="p-4 mb-8 navbar-padding-styling">
+<nav class="mb-8 navbar-padding-styling">
   <div class="container mx-auto flex justify-between items-center">
-    <div class="text-black text-lg cinzel-font title-style font-semibold">
+    <div class="text-lg cinzel-font title-style font-semibold">
       <span class="additional-size">D</span>OUGLAS <span class="additional-size"
         >F</span
       >ERRIN
     </div>
     <div class="block lg:hidden">
-      <button id="menu-button" class="text-black focus:outline-none">
+      <button id="menu-button" class="focus:outline-none">
         <svg
           class="w-6 h-6"
           fill="none"
@@ -26,7 +26,7 @@ import { menuItems } from "../consts";
         </svg>
       </button>
     </div>
-    <ul id="menu" class="hidden lg:flex space-x-6 text-black navbar-style">
+    <ul id="menu" class="hidden lg:flex space-x-6 navbar-style">
       {
         menuItems.map((item) => (
           <li>
@@ -42,9 +42,7 @@ import { menuItems } from "../consts";
     id="mobile-menu"
     class="hidden lg:hidden mt-4 border-t border-gray-300 pt-4"
   >
-    <ul
-      class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-black navbar-style font-light"
-    >
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 navbar-style font-light">
       {
         menuItems.map((item) => (
           <li>

@@ -67,6 +67,7 @@ body {
 }
 
 .title-style {
+    color: #171717e4;
     font-size: 1.5rem;
     line-height: 1.9rem;
     letter-spacing: 0.25rem;
@@ -86,24 +87,51 @@ body {
 }
 
 .picture-text-1 {
-    font-style: italic;
+    font-style: oblique;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.picture-text-1_year {
+    font-style: normal !important;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9rem;
     line-height: 1.5rem;
     letter-spacing: 0.1rem;
     font-weight: 400;
+    margin-bottom: 5px;
 }
 
-.picture-text-2 {}
+.picture-text-2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1px;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+}
 
 .custom-bottom-line {
     border-bottom: 2px solid #d4d4d4;
 }
 
+/* media query that on 1200 pixel or greater apply this */
+@media (min-width: 1200px) {
+    .navbar-padding-styling {
+        padding-left: 10rem !important;
+        padding-right: 10rem !important;
+    }
+}
+
 .navbar-padding-styling {
     padding-top: 50px;
     padding-bottom: 25px;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    color: #272727ad;
     border-bottom: 2px solid #d4d4d4;
+    padding-left: 10px;
+    padding-right: 10px;
 }
