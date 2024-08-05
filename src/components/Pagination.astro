@@ -8,11 +8,11 @@ const lastUrl = `${firstPath}/${page.lastPage}`;
 <nav aria-label="Blog pages" class="mt-2 mb-6 flex items-center justify-center space-x-2">
 	{
 		!page.url.prev ? (
-			<span class="text-gray-500 cursor-not-allowed">
+			<span class="text-gray-500 cursor-not-allowed bg-white text-black p-2">
 				First
 			</span>
 		) : (
-			<a href="../blog" class="text-blue-600 hover:text-blue-700">
+			<a href="../blog" class="text-blue-600 hover:text-blue-700 text-black bg-white p-2">
 				First
 			</a>
 		)
@@ -34,8 +34,8 @@ const lastUrl = `${firstPath}/${page.lastPage}`;
 		paginationList.map((num) => (
 			<a
 				href={`../${firstPath}/${num}`}
-				class={`px-2 py-1 ${
-					page.currentPage == num ? 'text-white bg-blue-600' : 'text-blue-600 hover:bg-blue-100'
+				class={`px-2 py-1 bg-white ${
+					page.currentPage == num ? 'text-white bg-blue-600 bg-[#337ab7]' : 'text-blue-600 bg-white text-black hover:bg-blue-100'
 				} rounded`}
 			>
 				{num}
@@ -57,11 +57,11 @@ const lastUrl = `${firstPath}/${page.lastPage}`;
 
 	{
 		!page.url.next ? (
-			<span class="text-gray-500 cursor-not-allowed">
+			<span class="text-gray-500 cursor-not-allowed text-black bg-white p-2">
 				Last
 			</span>
 		) : (
-			<a href={`../${lastUrl}`} class="text-blue-600 hover:text-blue-700">
+			<a href={`../${lastUrl}`} class="text-blue-600 hover:text-blue-700 text-black bg-white p-2">
 				Last
 			</a>
 		)
