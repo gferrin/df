@@ -136,9 +136,44 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"data": {
+"arcata-2013.md": {
+	id: "arcata-2013.md";
+  slug: "arcata-2013";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"maroon-2016.md": {
+	id: "maroon-2016.md";
+  slug: "maroon-2016";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"range-and-separation-2016.md": {
+	id: "range-and-separation-2016.md";
+  slug: "range-and-separation-2016";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"romeo-juliette-left-panel.md": {
+	id: "romeo-juliette-left-panel.md";
+  slug: "romeo-juliette-left-panel";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
 "self-portrait-2016.md": {
 	id: "self-portrait-2016.md";
   slug: "self-portrait-2016";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"self-portrait-long-beard.md": {
+	id: "self-portrait-long-beard.md";
+  slug: "self-portrait-long-beard";
   body: string;
   collection: "data";
   data: InferEntrySchema<"data">
@@ -160,5 +195,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("./../src/content/config.js");
+	export type ContentConfig = typeof import("../src/content/config.js");
 }
