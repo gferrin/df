@@ -2,6 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Press">
-	Press Page
+<Layout title="About">
+	<div class="about mx-auto">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+			<div class="col-span-1">
+				<h3 class="font-bold">Press</h3>
+					<ol class="about-paragraph">
+						<li><a href="http://ww16.theartroomonline.net/2013/02/an-interview-with-douglas-ferrin.html?sub1=20240806-1342-217a-ae12-ad8ca28593d8">Ferrin Artist Interview — The Art Room</a></li>
+						<li><a href="http://business.highbeam.com/138173/article-1G1-14212085/developing-artist">Devolping as an Artist — American Artist Magazine</a></li>
+						<li><a href="https://www.theartroomonline.net/2014/03/ugliness-in-art-douglas-ferrin.html">Strange Beauty: Douglas Ferrin — The Art Room</a></li>
+						<li><a href="http://ww16.theartroomonline.net/2014/01/favorites-of-2013-douglas-ferrin.html?sub1=20240806-1343-330b-8217-023e542f2836">Favorites of 2013: Douglas Ferrin — The Art Room</a></li>
+					</ol>
+			</div>
+			<div class="col-span-1">
+				<img src="/press.jpg" alt="Douglas Ferrin" class="rounded-lg" />
+			</div>
+		</div>
+	</div>
 </Layout>
