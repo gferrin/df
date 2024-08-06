@@ -3,7 +3,7 @@ import { email } from "../consts";
 const { item } = Astro.props;
 
 // Handle both single item and array of items
-const post = Array.isArray(item.data) ? item.data[0] : item.data;
+const post = item.data ?? item;
 const frontmatter = post?.frontmatter || item.data;
 
 // Fallback values for each property
