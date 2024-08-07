@@ -28,13 +28,13 @@ const key = post?.url || item.id || frontmatter.title;
     </a>
     <div class="text-center md:text-left md:pl-4 mx-auto lg:mx-0">
         <h2 class="picture-text-1">
-            {title}
+            {title},
             <span class="picture-text-1_year">
                 {year}
             </span>
         </h2>
-        <div class="picture-text-2">Medium: {category}</div>
-        <div class="picture-text-2">Dimensions: {dimensions}</div>
+        <div class="picture-text-2">{category}</div>
+        <div class="picture-text-2">{dimensions}</div>
         <!-- <div class="picture-text-2">Year: {year}</div> -->
         {
             forSale && (
