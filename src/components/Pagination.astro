@@ -3,6 +3,11 @@ const { page, firstPath } = Astro.props;
 // @ts-ignore
 const paginationList = Array.from({ length: `${page.lastPage}` }, (_, i) => i + 1);
 const lastUrl = `${firstPath}/${page.lastPage}`;
+
+// get first path of url to use for pagination
+const pathname = new URL(Astro.request.url).pathname.split('/');
+console.log ('pathname: ', pathname);
+const _firstPath = pathname[1];
 ---
 
 <nav aria-label="Blog pages" class="mt-2 mb-6 flex items-center justify-center space-x-2">
@@ -12,7 +17,7 @@ const lastUrl = `${firstPath}/${page.lastPage}`;
 				First
 			</span>
 		) : (
-			<a href="../blog" class="text-blue-600 hover:text-blue-700 text-black bg-white p-2">
+			<a href={`/${_firstPath}/1`} class="text-blue-600 hover:text-blue-700 text-black bg-white p-2">
 				First
 			</a>
 		)
@@ -33,8 +38,8 @@ const lastUrl = `${firstPath}/${page.lastPage}`;
 	{
 		paginationList.map((num) => (
 			<a
-				href={`../${firstPath}/${num}`}
-				class={`px-2 py-1 bg-white ${
+				href={`/${_firstPath}/${num}`}
+				class={`px-2 py-1 ${
 					page.currentPage == num ? 'text-white bg-blue-700' : 'text-blue-600 text-black hover:bg-blue-100'
 				} rounded`}
 			>
@@ -61,7 +66,7 @@ const lastUrl = `${firstPath}/${page.lastPage}`;
 				Last
 			</span>
 		) : (
-			<a href={`../${lastUrl}`} class="text-blue-600 hover:text-blue-700 text-black bg-white p-2">
+			<a href={`/${_firstPath}/${paginationList.length}`} class="text-blue-600 hover:text-blue-700 text-black bg-white p-2">
 				Last
 			</a>
 		)
