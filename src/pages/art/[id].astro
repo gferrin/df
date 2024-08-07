@@ -1,0 +1,20 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import Item from '../../components/Item.astro';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+	const projects = await getCollection('data');
+	return projects.map((project) => ({
+		params: { id: project.slug },
+	}));
+}
+
+const { id } = Astro.params;
+
+const item: any = await getEntry('data', id);
+---
+
+<Layout title={item.data.title}>
+  <Item item={item} />
+</Layout>

@@ -7,4 +7,5 @@ s3Url: "https://assets.douglasferrin.com/works/romeo-large.jpg"
 category: "Oil on Canvas"
 forSale: true
 draft: false
+id: "romeo-juliette-left-panel"
 ---

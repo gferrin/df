@@ -7,4 +7,5 @@ s3Url: "https://assets.douglasferrin.com/works/douglas-ferrin-wmd-large.jpg"
 category: "Pencil on Paper"
 forSale: true
 draft: false
+id: "self-portrait-long-beard"
 ---

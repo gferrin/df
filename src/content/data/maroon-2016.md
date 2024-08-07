@@ -7,4 +7,5 @@ s3Url: "https://assets.douglasferrin.com/works/maroon-large.jpg"
 category: "Acrylic on Bristol Board"
 forSale: true
 draft: false
+id: "maroon-2016"
 ---

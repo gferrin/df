@@ -7,4 +7,5 @@ s3Url: "https://assets.douglasferrin.com/works/maroon-large.jpg"
 category: "Oil on Linen"
 forSale: true
 draft: false
+id: "arcata-2013"
 ---

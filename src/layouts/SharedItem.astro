@@ -5,15 +5,11 @@ import Item from '../components/Item.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 let { pageData, firstPath } = Astro.props;
-console.log("PageData: ", pageData);
+console.log('PageData: ', pageData);
 ---
 
 <Layout title={`${SITE_TITLE}`}>
-    {
-        pageData.data.map((item) => (
-					<Item item={item} />
-				))
-    }
-    <!-- <Item item={pageData} /> -->
-    <Pagination page={pageData} firstPath={firstPath} />
+	{pageData.data.map((item) => <Item item={item} />)}
+	<!-- <Item item={pageData} /> -->
+	<Pagination page={pageData} firstPath={firstPath} />
 </Layout>

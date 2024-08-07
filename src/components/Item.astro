@@ -7,6 +7,7 @@ const post = item.data ?? item;
 const frontmatter = post?.frontmatter || item.data;
 
 // Fallback values for each property
+let slug = frontmatter.id
 const title = frontmatter.title || "Untitled";
 const s3Url = frontmatter.s3Url || "#";
 const category = frontmatter.category || "Unknown";
@@ -22,7 +23,9 @@ const key = post?.url || item.id || frontmatter.title;
     key={key}
     class="flex flex-col md:flex-row items-start mb-8 md:justify-center"
 >
-    <img src={s3Url} alt={title} class="w-full p-4 lg:p-0 md:w-1/2 mb-4" />
+    <a href={"/art/"+slug} class="">
+        <img src={s3Url} alt={title} class="w-full p-4 lg:p-0 mb-4" />
+    </a>
     <div class="text-center md:text-left md:pl-4 mx-auto lg:mx-0">
         <h2 class="picture-text-1">
             {title}

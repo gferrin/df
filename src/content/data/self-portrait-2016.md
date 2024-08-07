@@ -7,4 +7,5 @@ s3Url: "https://assets.douglasferrin.com/works/self-portrait-jail-large.jpg"
 category: "Self Portraits"
 forSale: true
 draft: false
+id: "self-portrait-2016"
 ---

@@ -11,6 +11,7 @@ const data = defineCollection({
 		category: z.string(),
 		forSale: z.boolean().default(false),
 		draft: z.boolean().default(false),
+		id: z.string(),
 	}),
 });
 

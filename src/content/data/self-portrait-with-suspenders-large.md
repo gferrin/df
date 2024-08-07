@@ -7,4 +7,5 @@ s3Url: "https://assets.douglasferrin.com/works/self-portrait-with-suspenders-lar
 category: "Self Portraits"
 forSale: false
 draft: false
+id: "self-portrait-with-suspenders-large"
 ---
