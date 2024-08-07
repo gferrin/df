@@ -1,6 +1,6 @@
 ---
 menuId: "figure-paintings"
-title: "Rage and Separation"
+title: "Shelly in a Slip"
 year: 1990
 dimensions: "50 x 56 in"
 s3Url: "https://assets.douglasferrin.com/works/shelly-large.jpg"
