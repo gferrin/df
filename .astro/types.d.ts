@@ -136,9 +136,79 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"data": {
+"38-special.md": {
+	id: "38-special.md";
+  slug: "38-special";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"american-gothic.md": {
+	id: "american-gothic.md";
+  slug: "american-gothic";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
 "arcata-2013.md": {
 	id: "arcata-2013.md";
   slug: "arcata-2013";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"be-myan-valentine.md": {
+	id: "be-myan-valentine.md";
+  slug: "be-myan-valentine";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"black-and-white.md": {
+	id: "black-and-white.md";
+  slug: "black-and-white";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"cave-paintings.md": {
+	id: "cave-paintings.md";
+  slug: "cave-paintings";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"eureka-still-life.md": {
+	id: "eureka-still-life.md";
+  slug: "eureka-still-life";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"jamie.md": {
+	id: "jamie.md";
+  slug: "jamie";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"joyce-lifting-skirt.md": {
+	id: "joyce-lifting-skirt.md";
+  slug: "joyce-lifting-skirt";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"lace-runner-and-blue-bottles.md": {
+	id: "lace-runner-and-blue-bottles.md";
+  slug: "lace-runner-and-blue-bottles";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"laura-and-beth.md": {
+	id: "laura-and-beth.md";
+  slug: "laura-and-beth";
   body: string;
   collection: "data";
   data: InferEntrySchema<"data">
@@ -150,9 +220,30 @@ declare module 'astro:content' {
   collection: "data";
   data: InferEntrySchema<"data">
 } & { render(): Render[".md"] };
-"range-and-separation-2016.md": {
-	id: "range-and-separation-2016.md";
-  slug: "range-and-separation-2016";
+"night-dolls.md": {
+	id: "night-dolls.md";
+  slug: "night-dolls";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"opium-pipe.md": {
+	id: "opium-pipe.md";
+  slug: "opium-pipe";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"prison-vanitas.md": {
+	id: "prison-vanitas.md";
+  slug: "prison-vanitas";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"range-and-separation.md": {
+	id: "range-and-separation.md";
+  slug: "range-and-separation";
   body: string;
   collection: "data";
   data: InferEntrySchema<"data">
@@ -160,6 +251,20 @@ declare module 'astro:content' {
 "romeo-juliette-left-panel.md": {
 	id: "romeo-juliette-left-panel.md";
   slug: "romeo-juliette-left-panel";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"self-portrait-1999.md": {
+	id: "self-portrait-1999.md";
+  slug: "self-portrait-1999";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"self-portrait-2005.md": {
+	id: "self-portrait-2005.md";
+  slug: "self-portrait-2005";
   body: string;
   collection: "data";
   data: InferEntrySchema<"data">
@@ -181,6 +286,34 @@ declare module 'astro:content' {
 "self-portrait-with-suspenders-large.md": {
 	id: "self-portrait-with-suspenders-large.md";
   slug: "self-portrait-with-suspenders-large";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"shelly-in-a-slip.md": {
+	id: "shelly-in-a-slip.md";
+  slug: "shelly-in-a-slip";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"sitting-at-easel-2013.md": {
+	id: "sitting-at-easel-2013.md";
+  slug: "sitting-at-easel-2013";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"skinned-rabbit.md": {
+	id: "skinned-rabbit.md";
+  slug: "skinned-rabbit";
+  body: string;
+  collection: "data";
+  data: InferEntrySchema<"data">
+} & { render(): Render[".md"] };
+"spring-cleaning.md": {
+	id: "spring-cleaning.md";
+  slug: "spring-cleaning";
   body: string;
   collection: "data";
   data: InferEntrySchema<"data">
