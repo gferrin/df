@@ -24,7 +24,9 @@ const key = post?.url || item.id || frontmatter.title;
     class="flex flex-col md:flex-row items-start mb-8 md:justify-center"
 >
     <a href={"/art/"+slug} class="">
-        <img src={s3Url} alt={title} class="w-full p-4 lg:p-0 mb-4" />
+        <div class="image-container">
+            <img src={s3Url} alt={title} class="" />
+        </div>
     </a>
     <div class="text-center md:text-left md:pl-4 mx-auto lg:mx-0">
         <h2 class="picture-text-1">
