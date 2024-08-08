@@ -17,7 +17,7 @@ const _firstPath = pathname[1];
 				First
 			</span>
 		) : (
-			<a href={`/${_firstPath}/1`} class="text-blue-600 hover:text-blue-700 text-black bg-white p-2">
+			<a href={`/${_firstPath}/1`} class="bg-white text-black text-black bg-white p-2">
 				First
 			</a>
 		)
@@ -25,7 +25,7 @@ const _firstPath = pathname[1];
 
 	{
 		page.url.prev ? (
-			<a href={page.url.prev} class="text-blue-600 hover:text-blue-700">
+			<a href={page.url.prev} class="bg-white text-black">
 				<i class="fa fa-arrow-left" />
 			</a>
 		) : (
@@ -39,8 +39,8 @@ const _firstPath = pathname[1];
 		paginationList.map((num) => (
 			<a
 				href={`/${_firstPath}/${num}`}
-				class={`px-2 py-1 ${
-					page.currentPage == num ? 'text-white bg-blue-700' : 'text-blue-600 text-black hover:bg-blue-100'
+				class={`px-2 py-1 p-4 ${
+					page.currentPage == num ? 'text-white bg-black opacity-80' : 'bg-white text-black hover:bg-blue-100'
 				} rounded`}
 			>
 				{num}
@@ -54,7 +54,7 @@ const _firstPath = pathname[1];
 				<i class="fa fa-arrow-right" />
 			</span>
 		) : (
-			<a href={page.url.next} class="text-blue-600 hover:text-blue-700">
+			<a href={page.url.next} class="bg-white text-black">
 				<i class="fa fa-arrow-right" />
 			</a>
 		)
@@ -66,7 +66,7 @@ const _firstPath = pathname[1];
 				Last
 			</span>
 		) : (
-			<a href={`/${_firstPath}/${paginationList.length}`} class="text-blue-600 hover:text-blue-700 text-black bg-white p-2">
+			<a href={`/${_firstPath}/${paginationList.length}`} class="bg-white text-black p-2">
 				Last
 			</a>
 		)
