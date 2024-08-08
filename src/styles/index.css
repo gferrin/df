@@ -156,3 +156,12 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+
+@media (max-width: 768px) {
+    .image-container {
+        width: 100%!important;
+        height: 100%!important;
+        overflow: hidden;
+      }
+}
