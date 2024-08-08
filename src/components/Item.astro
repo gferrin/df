@@ -1,5 +1,5 @@
 ---
-import { email } from "../consts";
+import { email } from '../consts';
 const { item } = Astro.props;
 
 // Handle both single item and array of items
@@ -7,12 +7,12 @@ const post = item.data ?? item;
 const frontmatter = post?.frontmatter || item.data;
 
 // Fallback values for each property
-let slug = frontmatter.id
-const title = frontmatter.title || "Untitled";
-const s3Url = frontmatter.s3Url || "#";
-const category = frontmatter.category || "Unknown";
-const dimensions = frontmatter.dimensions || "Not specified";
-const year = frontmatter.year || "Unknown";
+let slug = frontmatter.id;
+const title = frontmatter.title || 'Untitled';
+const s3Url = frontmatter.s3Url || '#';
+const category = frontmatter.category || 'Unknown';
+const dimensions = frontmatter.dimensions || 'Not specified';
+const year = frontmatter.year || 'Unknown';
 const forSale = frontmatter.forSale || false;
 
 // Use the first available identifier for the key
@@ -20,33 +20,29 @@ const key = post?.url || item.id || frontmatter.title;
 ---
 
 <section class="md:mx-auto md:pl-96">
-    <div
-    key={key}
-    class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 items-start"
->
-    <a href={"/art/"+slug} class="order-1 md:order-2 justify-self-end">
-            <img src={s3Url} alt={title} class="w-full" />
-    </a>
-    <div class="text-center md:text-start order-2 md:order-2 md:pl-4">
-        <h2 class="picture-text-1">
-            {title},
-            <span class="picture-text-1_year">
-                {year}
-            </span>
-        </h2>
-        <div class="picture-text-2">{category}</div>
-        <div class="picture-text-2">{dimensions}</div>
-        {
-            forSale && (
-                <a
-                    href={`mailto:${email}?subject=${title}`}
-                    class="text-black underline hover:text-blue-500 mt-4 arial-font"
-                >
-                    Inquire to Purchase
-                </a>
-            )
-        }
-    </div>
-</div>
-
+	<div key={key} class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 items-start">
+		<a href={'/art/' + slug} class="order-1 md:order-2 justify-self-end">
+			<img src={s3Url} alt={title} class="w-full" />
+		</a>
+		<div class="text-center md:text-start order-2 md:order-2 md:pl-4">
+			<h2 class="picture-text-1">
+				{title},
+				<span class="picture-text-1_year">
+					{year}
+				</span>
+			</h2>
+			<div class="picture-text-2">{category}</div>
+			<div class="picture-text-2">{dimensions}</div>
+			{
+				forSale && (
+					<a
+						href={`mailto:${email}?subject=${title}`}
+						class="text-black underline hover:text-blue-500 mt-4 arial-font"
+					>
+						Inquire to Purchase
+					</a>
+				)
+			}
+		</div>
+	</div>
 </section>
