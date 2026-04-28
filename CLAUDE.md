@@ -146,13 +146,27 @@ This deploys directly from your local build.
 Astro 4.x requires Node.js 18.14+. The project includes:
 - `.nvmrc` - specifies Node 20
 - `.node-version` - specifies Node 20.19.0
+- `NODE_VERSION=20` environment variable set in Cloudflare Pages
 
-If Cloudflare builds fail with Node errors, ensure `NODE_VERSION=20` is set in:
-**Cloudflare Dashboard → Pages → df → Settings → Environment variables**
+### Dependency Management
+**Important:** Dependencies in `package.json` are pinned to exact versions (no `^` prefix).
+
+This prevents Cloudflare Pages from installing newer incompatible versions. The `package-lock.json` is committed to ensure consistent installs.
+
+**When updating dependencies:**
+1. Update version in `package.json`
+2. Run `npm install` to regenerate `package-lock.json`
+3. Test with `npm run build` locally
+4. Commit both files together
+
+### Cloudflare Pages Build Environment
+- Uses pnpm by default if no lockfile present
+- Installs latest compatible versions unless pinned
+- Build logs available via: `npx wrangler pages deployment list --project-name df`
 
 ## Notes
 
-- The `site` URL in `astro.config.mjs` is set to a placeholder - update to `https://douglasferrin.com` for proper sitemap generation
 - Images are not stored in repo - all artwork images live on CDN
 - Homepage displays self-portraits category by default
-- Avoid `console.log` in components - they clutter build output and can cause issues
+- Avoid `console.log` in components - they clutter build output
+- The `site` URL in `astro.config.mjs` must be set to the actual domain for sitemap generation
