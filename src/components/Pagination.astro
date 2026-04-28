@@ -6,7 +6,6 @@ const lastUrl = `${firstPath}/${page.lastPage}`;
 
 // get first path of url to use for pagination
 const pathname = new URL(Astro.request.url).pathname.split('/');
-console.log ('pathname: ', pathname);
 const _firstPath = pathname[1];
 ---
 
