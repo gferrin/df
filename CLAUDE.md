@@ -108,8 +108,51 @@ npm run build    # Production build to ./dist
 npm run preview  # Preview production build
 ```
 
+## Testing Before Deployment
+
+**Always test locally before pushing to production:**
+
+1. **Run the build locally** to catch errors before they hit Cloudflare:
+   ```bash
+   npm run build
+   ```
+   If this succeeds, the Cloudflare build should also succeed.
+
+2. **Test with the dev server** for visual verification:
+   ```bash
+   npm run dev
+   ```
+   Then check http://localhost:4321 to verify changes look correct.
+
+3. **Preview production build** to test the exact output:
+   ```bash
+   npm run build && npm run preview
+   ```
+
+## Deployment
+
+### Automatic (Git-triggered)
+Pushing to `main` triggers a Cloudflare Pages build automatically.
+
+### Manual Deploy (if git builds fail)
+If Cloudflare's git-triggered build fails but local build succeeds:
+```bash
+npm run build
+npx wrangler pages deploy dist --project-name df
+```
+This deploys directly from your local build.
+
+### Node.js Version
+Astro 4.x requires Node.js 18.14+. The project includes:
+- `.nvmrc` - specifies Node 20
+- `.node-version` - specifies Node 20.19.0
+
+If Cloudflare builds fail with Node errors, ensure `NODE_VERSION=20` is set in:
+**Cloudflare Dashboard → Pages → df → Settings → Environment variables**
+
 ## Notes
 
 - The `site` URL in `astro.config.mjs` is set to a placeholder - update to `https://douglasferrin.com` for proper sitemap generation
 - Images are not stored in repo - all artwork images live on CDN
 - Homepage displays self-portraits category by default
+- Avoid `console.log` in components - they clutter build output and can cause issues
