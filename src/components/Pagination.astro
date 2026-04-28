@@ -13,11 +13,11 @@ const _firstPath = pathname[1];
 <nav aria-label="Blog pages" class="mt-2 mb-6 flex items-center justify-center space-x-2">
 	{
 		!page.url.prev ? (
-			<span class="text-gray-500 cursor-not-allowed bg-white text-black p-2">
+			<span class="text-gray-500 cursor-not-allowed bg-white px-3 py-1 rounded">
 				First
 			</span>
 		) : (
-			<a href={`/${_firstPath}/1`} class="bg-white text-black text-black bg-white p-2">
+			<a href={`/${_firstPath}/1`} class="bg-white text-black px-3 py-1 rounded hover:bg-gray-100">
 				First
 			</a>
 		)
@@ -25,11 +25,11 @@ const _firstPath = pathname[1];
 
 	{
 		page.url.prev ? (
-			<a href={page.url.prev} class="bg-white text-black">
+			<a href={page.url.prev} class="bg-white text-black px-3 py-1 rounded hover:bg-gray-100">
 				<i class="fa fa-arrow-left" />
 			</a>
 		) : (
-			<span class="text-gray-500 cursor-not-allowed">
+			<span class="text-gray-500 cursor-not-allowed px-3 py-1 rounded">
 				<i class="fa fa-arrow-left" />
 			</span>
 		)
@@ -39,9 +39,9 @@ const _firstPath = pathname[1];
 		paginationList.map((num) => (
 			<a
 				href={`/${_firstPath}/${num}`}
-				class={`px-2 py-1 p-4 ${
-					page.currentPage == num ? 'text-white bg-black opacity-80' : 'bg-white text-black hover:bg-blue-100'
-				} rounded`}
+				class={`px-3 py-1 rounded ${
+					page.currentPage == num ? 'text-white bg-black opacity-80' : 'bg-white text-black hover:bg-gray-100'
+				}`}
 			>
 				{num}
 			</a>
@@ -50,11 +50,11 @@ const _firstPath = pathname[1];
 
 	{
 		!page.url.next ? (
-			<span class="text-gray-500 cursor-not-allowed">
+			<span class="text-gray-500 cursor-not-allowed px-3 py-1 rounded">
 				<i class="fa fa-arrow-right" />
 			</span>
 		) : (
-			<a href={page.url.next} class="bg-white text-black">
+			<a href={page.url.next} class="bg-white text-black px-3 py-1 rounded hover:bg-gray-100">
 				<i class="fa fa-arrow-right" />
 			</a>
 		)
@@ -62,11 +62,11 @@ const _firstPath = pathname[1];
 
 	{
 		!page.url.next ? (
-			<span class="text-gray-500 cursor-not-allowed text-black bg-white p-2">
+			<span class="text-gray-500 cursor-not-allowed bg-white px-3 py-1 rounded">
 				Last
 			</span>
 		) : (
-			<a href={`/${_firstPath}/${paginationList.length}`} class="bg-white text-black p-2">
+			<a href={`/${_firstPath}/${paginationList.length}`} class="bg-white text-black px-3 py-1 rounded hover:bg-gray-100">
 				Last
 			</a>
 		)

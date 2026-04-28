@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Item from '../components/Item.astro';
 import { getCollection } from 'astro:content';
+import { SITE_TITLE } from '../consts';
 
 // Fetch all data from the collection
 const allData = await getCollection('data');
@@ -10,7 +11,7 @@ const allData = await getCollection('data');
 const selfPortraits = allData.filter((item) => item.data.menuId === 'self-protraits');
 ---
 
-<Layout title="DF">
+<Layout title={SITE_TITLE}>
 	{
 		selfPortraits.length > 0 ? (
 			<div class="container mx-auto p-4">
